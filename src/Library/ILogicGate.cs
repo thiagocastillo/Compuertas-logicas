@@ -1,6 +1,7 @@
 namespace Library;
 
-public class ILogicGate
+public interface ILogicalGate
 {
+    void AddInput(ILogicalGate gate);
     
 }

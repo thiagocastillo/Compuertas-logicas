@@ -2,15 +2,15 @@ namespace Library;
 
 public class AndGate:ILogicGate
 {
-    List <ILogicGate> entradas = new List<ILogicGate>();
-    
-    public void AddInput(ILogicGate gate)
+    private List<ITrustValue> inputs = new List<ITrustValue>();
+
+    public void AddInput(ITrustValue input)
     {
-        entradas.Add(gate);
+        inputs.Add(input);
     }
     
     public bool Calculate()
     {
-        return entradas[0].Calculate() && entradas[1].Calculate();
+        return inputs[0].Calculate() && inputs[1].Calculate();
     }
 }

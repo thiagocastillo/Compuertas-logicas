@@ -1,9 +1,17 @@
-namespace Library;
-
-public class TrustValue:ITrustValue
+namespace Library
 {
-    public bool calculate()
+    public class TrustValue : ITrustValue
     {
-        return true;
+        private bool value;
+
+        public TrustValue(bool value)
+        {
+            this.value = value;
+        }
+
+        public bool Calculate()
+        {
+            return value;
+        }
     }
 }
