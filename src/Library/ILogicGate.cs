@@ -1,7 +1,6 @@
 namespace Library;
 
-public interface ILogicalGate
+public interface ILogicGate : ITrustValue
 {
-    void AddInput(ILogicalGate gate);
-    
+    void AddInput(ITrustValue input);
 }
